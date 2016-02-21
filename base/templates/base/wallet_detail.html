@@ -1,0 +1,95 @@
+{% extends "_layouts/base.html" %} {% block css %} {{block.super}}
+<style>
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+</style>
+{% endblock css %} {% block page_title %}온더 에테리움 지갑{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %}
+<!-- This code is taken from http://getbootstrap.com/examples/jumbotron/ -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="{% url 'wallet' %}">계좌관리</a></li>
+                <li><a href="#" target="_ext">KRW입출금</a></li>
+                <li><a href="{% url 'transaction_eth' %}">ETHER입출금</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div>
+                <div>
+                    <a href=""><h1><계좌관리</h1></a>
+                </div>
+
+                <div>
+                    <div>
+                        <p>지갑주소</p>
+                    </div>
+                    <div>
+                        <a href="">{{ethAccount.account_address}}</a>
+                    </div>
+                    <div>
+                        <p>잔액 현황</p>
+                    </div>
+                    <div>
+                        <p>에테르 보유 <b>{{ethAccount.balance}} ETH</b></p>
+                    </div>
+                    <div>
+                        <p>원화로 환산 ~<b>0 KRW</b></p>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">송금(전송) 하기</button>
+                </div>
+
+                <div>
+                    <table class="table table-hover">
+                        <caption>거래내역</caption>
+                        <thead>
+                            <tr>
+                                <th>거래시각</th>
+                                <th>입출금구분</th>
+                                <th>거래ID</th>
+                                <th>금액(ETH)</th>
+                                <th>상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+{% endblock %}

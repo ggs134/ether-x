@@ -1,0 +1,47 @@
+{% extends "_layouts/base.html" %} {% block css %} {{block.super}}
+<style>
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+</style>
+{% endblock css %} {% block page_title %}온더 에테리움 지갑{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %}
+<!-- This code is taken from http://getbootstrap.com/examples/jumbotron/ -->
+
+<div class="container">
+    <div class="row">
+        <!-- <div class="col-md-2">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">계좌관리</a></li>
+                <li><a href="#" target="_ext">KRW입출금</a></li>
+                <li><a href="#" target="_ext">ETHER입출금</a></li>
+            </ul>
+        </div> -->
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+
+            <form class="form-signin" action="/accounts/auth/" method="POST">{% csrf_token %}
+                <h2 class="form-signin-heading">로그인</h2>
+                <label for="inputEmail" class="sr-only">Email address</label>
+                <input type="text" name="email" class="form-control" placeholder="ID" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="pass" class="form-control" placeholder="Password" required>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">로그인</button>
+                <button class="btn btn-lg btn-primary btn-block" type="button">회원가입</button>
+          </form>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+{% endblock %}

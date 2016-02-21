@@ -1,0 +1,87 @@
+{% extends "_layouts/base.html" %} {% block css %} {{block.super}}
+<style>
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+</style>
+{% endblock css %} {% block page_title %}온더 에테리움 지갑{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %}
+<!-- This code is taken from http://getbootstrap.com/examples/jumbotron/ -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="{% url 'wallet' %}">계좌관리</a></li>
+                <li><a href="#" target="_ext">KRW입출금</a></li>
+                <li><a href="{% url 'transaction_eth' %}">ETHER입출금</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div>
+                <div>
+                    <h1>계좌관리</h1>
+                </div>
+
+                <div>
+                    <div>
+                        <p>계좌평가액</p>
+                    </div>
+                    <div>
+                        <p>Total ETH <b>{{balance}} ETH</b></p>
+                    </div>
+                    <div>
+                        <p>Total KRW <b>0 KRW</b></p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>지갑</p>
+                    <div>
+                        {%  for account in accounts%}
+                        <a href="{% url 'wallet_detail' address=account.account_address %}"><button type="button" class="btn btn-default btn-lg btn-block">{{account.account_address}}</button></a>
+                        {%endfor%}
+                        <!-- <button type="button" class="btn btn-primary btn-lg btn-block">새 지갑 만들기(+)</button> -->
+
+                        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+  새 지갑 만들기(+)
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">비밀번호를 입력하세요</h4>
+      </div>
+      <div class="modal-body">
+        <form method="POST" class="pass-form">{% csrf_token %}
+        {{ form.as_p }}
+        <!-- <button type="submit" class="save btn btn-default">Save</button> -->
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <button type="submit" class="btn btn-primary">만들기</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+{% endblock %}

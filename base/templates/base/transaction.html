@@ -1,0 +1,56 @@
+{% extends "_layouts/base.html" %} {% block css %} {{block.super}}
+<style>
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+</style>
+{% endblock css %} {% block page_title %}온더 에테리움 지갑{% endblock %} {% block page_class %}home-page{% endblock %} {% block content %}
+<!-- This code is taken from http://getbootstrap.com/examples/jumbotron/ -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="{% url 'wallet' %}">계좌관리</a></li>
+                <li><a href="#" target="_ext">KRW입출금</a></li>
+                <li><a href="{% url 'transaction_eth' %}">ETHER입출금</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md-8">
+
+                <h2>ETHER 입출금</h2>
+                <ul id="myTab" class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a data-target="#home" id="home-tab" role="tab" data-toggle="tab">가이드</a></li>
+                  <li role="presentation" class=""><a data-target="#profile" role="tab" id="profile-tab" data-toggle="tab">입금하기</a></li>
+                  <li role="presentation" class=""><a data-target="#dropdown1" id="dropdown1-tab" data-toggle="tab">출금하기</a>
+                  </li>
+                  <li role="presentation" class=""><a data-target="#dropdown1" id="dropdown1-tab" data-toggle="tab">내역</a>
+                  </li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade active in" id="home">
+                    <p>입출금가이드 <br> 입출금가이드 <br> 입출금가이드 <br> </p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="profile">
+                    <h3>ETHER 입금하기</h3>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="dropdown1" >
+                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="dropdown2">
+                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+                  </div>
+                </div> <!-- tab content div -->
+
+        </div> <!-- col-md-8 div -->
+
+    </div> <!-- row div -->
+</div> <!-- container div -->
+
+
+{% endblock %}
