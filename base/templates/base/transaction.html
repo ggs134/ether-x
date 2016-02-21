@@ -25,24 +25,101 @@
 
                 <h2>ETHER 입출금</h2>
                 <ul id="myTab" class="nav nav-tabs" role="tablist">
-                  <li role="presentation" class="active"><a data-target="#home" id="home-tab" role="tab" data-toggle="tab">가이드</a></li>
-                  <li role="presentation" class=""><a data-target="#profile" role="tab" id="profile-tab" data-toggle="tab">입금하기</a></li>
-                  <li role="presentation" class=""><a data-target="#dropdown1" id="dropdown1-tab" data-toggle="tab">출금하기</a>
+                  <li role="presentation" class="active"><a data-target="#guide" id="guide-tab" role="tab" data-toggle="tab">가이드</a></li>
+                  <li role="presentation" class=""><a data-target="#deposit" id="deposit-tab" data-toggle="tab">입금하기</a></li>
+                  <li role="presentation" class=""><a data-target="#dropdown1" id="dropdown1-tab" data-toggle="tab">송금하기</a>
                   </li>
-                  <li role="presentation" class=""><a data-target="#dropdown1" id="dropdown1-tab" data-toggle="tab">내역</a>
+                  <li role="presentation" class=""><a data-target="#dropdown2" id="dropdown2-tab" data-toggle="tab">내역</a>
                   </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                  <div role="tabpanel" class="tab-pane fade active in" id="home">
+
+                <!-- 입출금 관련 탭 -->
+                  <div role="tabpanel" class="tab-pane fade active in" id="guide">
+                  <h3>입출금가이드</h3>
                     <p>입출금가이드 <br> 입출금가이드 <br> 입출금가이드 <br> </p>
                   </div>
-                  <div role="tabpanel" class="tab-pane fade" id="profile">
+
+                  <!-- 입금관련 탭 -->
+                  <div role="tabpanel" class="tab-pane fade" id="deposit">
                     <h3>ETHER 입금하기</h3>
+                      
+                      <!-- select account -->
+                      <div>
+                        <select class="selectpicker">
+                          <optgroup label="Picnic">
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                          </optgroup>
+                          <optgroup label="Camping">
+                            <option>Tent</option>
+                            <option>Flashlight</option>
+                            <option>Toilet Paper</option>
+                          </optgroup>
+                        </select>
+                      </div>
+                  
+                  <div>
+                      주소 : 
                   </div>
+                  <div>
+                    보유 ETH :
+                  </div>
+                      
+                  </div>
+
+                  <!-- 송금관련 탭 -->
                   <div role="tabpanel" class="tab-pane fade" id="dropdown1" >
-                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                    <h3>ETHER 송금하기</h3>
+
+                    
+                        <form>
+                          <div class="form-group row">
+                            <label for="from_address" class="col-sm-2 form-control-label">보내는 주소</label>
+                            <div>
+                              <select class="selectpicker col-sm-10">
+                                <optgroup label="Picnic" name="from_address">
+                                  <option value="">addrdss1</option>
+                                  <option value="">address2</option>
+                                  <option value="">address2</option>
+                                </optgroup>
+                                <!-- <optgroup label="Camping">
+                                  <option>Tent</option>
+                                  <option>Flashlight</option>
+                                  <option>Toilet Paper</option>
+                                </optgroup> -->
+                              </select>
+                            </div> <!-- col-sm-10 -->
+                          </div> <!-- from_address -->
+                          
+                          <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 form-control-label">받는곳</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="to_address" placeholder="받는곳">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 form-control-label">송금액</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="amount" placeholder="ETH">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button class="btn btn-lg btn-primary btn-block" type="submit">출금하기</button>
+                            </div>
+                          </div>
+                        </form>
+
                   </div>
+
+                  <!-- 거래내역 관련 탭 -->
                   <div role="tabpanel" class="tab-pane fade" id="dropdown2">
+                    <h3>ETHER 거래내역</h3>
+                    <div>입금할 내 지갑 선택1</div>
+
+                    <div>주소</div>
                     <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
                   </div>
                 </div> <!-- tab content div -->
