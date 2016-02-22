@@ -26,7 +26,7 @@
                 <h2>ETHER 입출금</h2>
                 <ul id="myTab" class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a data-target="#guide" id="guide-tab" role="tab" data-toggle="tab">가이드</a></li>
-                  <li role="presentation" class=""><a data-target="#deposit" id="deposit-tab" data-toggle="tab">입금하기</a></li>
+                  <li role="presentation" class=""><a data-target="#deposit" id="deposit-tab" data-toggle="tab">입금받기</a></li>
                   <li role="presentation" class=""><a data-target="#dropdown1" id="dropdown1-tab" data-toggle="tab">송금하기</a>
                   </li>
                   <li role="presentation" class=""><a data-target="#dropdown2" id="dropdown2-tab" data-toggle="tab">내역</a>
@@ -42,32 +42,116 @@
 
                   <!-- 입금관련 탭 -->
                   <div role="tabpanel" class="tab-pane fade" id="deposit">
-                    <h3>ETHER 입금하기</h3>
-                      
-                      <!-- select account -->
-                      <div>
-                        <select class="selectpicker">
-                          <optgroup label="Picnic">
-                            <option>Mustard</option>
-                            <option>Ketchup</option>
-                            <option>Relish</option>
-                          </optgroup>
-                          <optgroup label="Camping">
-                            <option>Tent</option>
-                            <option>Flashlight</option>
-                            <option>Toilet Paper</option>
-                          </optgroup>
-                        </select>
+                    <h3>ETHER 입금받기</h3>
+
+  <div>
+  <ul id="addressTab" class="nav" role="tablist">
+    <li role="presentation" class="dropdown">
+      <button data-target="#" id="addressTabDrop" class="dropdown-toggle btn btn-default btn-lg btn-block" data-toggle="dropdown" aria-controls="addressTabDrop1-contents">지갑선택<span class="caret"></span></button>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="addressTabDrop1" id="addressTabDrop1-contents">
+        <li><a data-target="#addressDropdown1" tabindex="-1" role="tab" id="addressDropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@fat</a></li>
+        <li><a data-target="#addressDropdown2" tabindex="-1" role="tab" id="addressDdropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@mdo</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div>
+  <div id="addressTabContent" class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active in" id="addressDropdown1" aria-labelledby="addressDropdown1-tab">
+      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="addressDropdown2" aria-labelledby="addressDropdown2-tab">
+      <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+    </div>
+  </div>
+
+
+
+
+
+                    <!-- <ul id="incomingAddrTab" class="nav nav-tabs" role="tablist">
+                      <div role="presentation" class="dropdown">
+                          <button data-target="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">ETH 지갑<span class="caret"></span></button>
+                          <ul class="dropdown-menu" role="menu" id="myTabDrop1-contents" aria-controls="myTabDrop1-content">
+                            <li><a data-target="#address1" tabindex="-1" role="tab" id="ethAddressCounter1" data-toggle="tab" aria-controls="address1">address1</a></li>
+                            <li><a data-target="#address2" tabindex="-1" role="tab" id="ethAddressCounter2" data-toggle="tab" aria-controls="address2">address2</a></li>
+                          </ul>
                       </div>
-                  
-                  <div>
-                      주소 : 
-                  </div>
-                  <div>
-                    보유 ETH :
-                  </div>
+                    </ul>
+                    
+                    <div id="incomingAddrTabContent" class="tab-content">
+                      <div role="tabpanel" class="tab-pane fade active in" id="address1" aria-labelledby="address1">
+                        <p>address1</p>
+                      </div>
+                      <div role="tabpanel" class="tab-pane fade" id="address2" aria-labelledby="address2">
+                        <p>address2</p>
+                      </div>
+                    </div> -->
                       
-                  </div>
+<!--                       select account
+<div role="tablist">
+  <select class="selectpicker show-tick">
+    <optgroup label="Picnic">
+      <option data-target="#addr1" role="presentation" id="addr1-tab">Address1</option>
+      <option data-target="#addr2" role="presentation" id="addr2-tab">Address2</option>
+      <option>Relish</option>
+    </optgroup>
+    <optgroup label="Camping">
+      <option>Tent</option>
+      <option>Flashlight</option>
+      <option>Toilet Paper</option>
+    </optgroup>
+  </select>
+</div> -->
+
+<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        address1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          address2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          address3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div> -->
+
+                  </div> <!-- 입금관련 탭 -->
 
                   <!-- 송금관련 탭 -->
                   <div role="tabpanel" class="tab-pane fade" id="dropdown1" >
@@ -104,6 +188,11 @@
                             <div class="col-sm-10">
                               <input type="text" class="form-control" id="amount" placeholder="ETH">
                             </div>
+                            <div class="col-sm-10 col-sm-offset-2">
+                              <small class="text-muted">
+                              ~00원
+                            </small>
+                            </div>
                           </div>
                           <div class="form-group row">
                             <div class="col-sm-offset-2 col-sm-10">
@@ -112,15 +201,47 @@
                           </div>
                         </form>
 
-                  </div>
+                  </div> <!-- 송금 -->
 
                   <!-- 거래내역 관련 탭 -->
                   <div role="tabpanel" class="tab-pane fade" id="dropdown2">
                     <h3>ETHER 거래내역</h3>
-                    <div>입금할 내 지갑 선택1</div>
+                                        <table class="table table-hover">
+                        <caption>거래내역</caption>
+                        <thead>
+                            <tr>
+                                <th>거래시각</th>
+                                <th>입출금구분</th>
+                                <th>거래ID</th>
+                                <th>금액(ETH)</th>
+                                <th>상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <div>주소</div>
-                    <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
                   </div>
                 </div> <!-- tab content div -->
 

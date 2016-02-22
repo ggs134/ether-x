@@ -54,7 +54,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="{% url 'home' %}">
-                        <img alt="ETHER-X" src=".../../static/small.png" id="logo">
+                        <img alt="ETHER-X" src="{% static 'small.png' %}" id="logo">
                     </a>
 
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -63,7 +63,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{% url 'home' %}">ETHER-X 에테리움 지갑</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">에테리움 지갑&거래소</a>
                 </div>
 
                 <div class="navbar-collapse collapse">
@@ -71,6 +71,7 @@
                     <ul class="nav navbar-nav">
                         <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
                         <li><a href="{% url 'wallet' %}">지갑</a></li>
+                        <li><a href="#">거래소</a></li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">미정 <span class="caret"></span></a>
@@ -158,7 +159,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/i18n/defaults-*.min.js"></script>
 
 
-    {% endblock cdn_js %}
+   {% endblock cdn_js %}
 
     <!-- scripts concatenated and minified via django-compressor -->
     {% compress js %} {% block js %}

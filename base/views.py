@@ -89,5 +89,7 @@ def wallet_add(request):
     return render(request, 'base/wallet.html', {'form': form})
 
 def transaction_eth(request):
-    return render(request, 'base/transaction.html', {})
+    user=User.objects.get(username=request.session['user_id'])
+    ethAccounts = EthAccount.objects.filter(owner=user).order_by("created_date")
+    return render(request, 'base/transaction.html', {"ethAccounts": ethAccounts})
 
